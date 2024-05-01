@@ -33,7 +33,8 @@ for i in range(latest, oldest-1, -1):
 
                 if content_type == "text/plain":
                     body = part.get_payload(decode=True)
-                    message += f"Body:\n\n \n {body.decode('UTF-8')}"
+                    print(body)
+                    message += f"Body:\n\n \n {body.decode('UTF-8', errors='replace')}"
             messages+=message + "~||~"
 imap.close()
 imap.logout()
