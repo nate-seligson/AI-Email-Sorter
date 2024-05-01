@@ -66,8 +66,8 @@ fetch("api-key.txt")
       }
     //taken from https://gist.github.com/rosszurowski/67f04465c424a9bc0dae
     function lerpColor(amount) { 
-        const a = "#fca874"
-        const b = "#3d1c12"
+        const b = "#fca874"
+        const a = "#3d1c12"
         var ah = parseInt(a.replace(/#/g, ''), 16),
             ar = ah >> 16, ag = ah >> 8 & 0xff, ab = ah & 0xff,
             bh = parseInt(b.replace(/#/g, ''), 16),
