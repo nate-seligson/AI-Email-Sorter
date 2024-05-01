@@ -12,9 +12,9 @@ fetch("api-key.txt")
       if(xhr.responseText.length > 5 && emails.length == 0){
         emails = xhr.responseText.split("~||~");
         emailLength = emails.length.toString()
-        if(emails.length > 10){
-          emailLength = "10+"
-          emails = emails.slice(0,9)
+        if(emails.length > 20){
+          emailLength = "20+"
+          emails = emails.slice(0,19)
         }
         info.innerHTML = ("gotten " + emailLength + " new emails...")
         run(emails)
