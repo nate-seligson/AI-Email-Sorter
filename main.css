@@ -1,0 +1,66 @@
+body{
+    background-image:linear-gradient(#bf774d,#3e281c);
+    background-size:cover;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#stuff{
+    text-align:center; 
+    padding:1%; 
+    border: 10px solid black; 
+    background-color:#592e25; 
+    margin:0 0 2% 0;
+    border-radius:25px;
+    box-shadow: 10px 10px;
+    overflow: hidden;
+}
+.task{
+    border: 2px solid black;
+    margin:0 0 2% 0;
+    padding:1%;
+    border-radius:25px;
+    font-size: 2em;
+    box-shadow: 10px 10px;
+}
+.innertext{
+    white-space-collapse: preserve-breaks;
+    text-align: left;
+    text-wrap: wrap;
+    overflow: clip;
+    display:none;
+    word-break: break-all;
+    font-size: 0.5em;
+    max-height: 0%;
+    font-weight: lighter;
+}
+@keyframes grow {
+    from { max-height: 0%;}
+    to { max-height: 100%; }
+}
+
+.task.open > .innertext {
+    display:block;
+    animation: grow 1s ease forwards;
+}
+
+@keyframes shrink {
+    from { max-height: 100%; display: block;}
+    to { max-height: 0%;}
+}
+.task.close > .innertext {
+    animation: shrink 0.5s ease forwards;
+    display:none;
+}
+#info{
+    width:fit-content;
+    padding:1%;
+    background-color:#8c4b3f;
+    margin:auto;
+    border: 2px solid black;
+    border-radius:25px;
+}
